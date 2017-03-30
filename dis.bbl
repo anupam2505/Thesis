@@ -1,0 +1,266 @@
+\begin{thebibliography}{55}
+\newcommand{\enquote}[1]{``#1''}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[otx(2017)]{otx}
+\enquote{{Alien Vault Open Threat Exchange}},
+  \urlprefix\url{https://otx.alienvault.com/} (2017).
+
+\bibitem[apt(2017)]{apt}
+\enquote{{APTNotes database}}, \urlprefix\url{https://github.com/aptnotes/data}
+  (2017).
+
+\bibitem[bea(2017)]{beautifulsoup}
+\enquote{{Beautiful Soup}},
+  \urlprefix\url{https://www.crummy.com/software/BeautifulSoup/} (2017).
+
+\bibitem[cap(2017)]{capec}
+\enquote{{Common Attack Pattern Enumeration and Classification}},
+  \urlprefix\url{https://capec.mitre.org/} (2017).
+
+\bibitem[coz(2017)]{cozyduke}
+\enquote{{CozyDuke Apt Report}},
+  \urlprefix\url{https://www.f-secure.com/documents/996508/1030745/CozyDuke}
+  (2017).
+
+\bibitem[cyb(2017)]{cybox}
+\enquote{{Cyber Observable eXpression}},
+  \urlprefix\url{https://cyboxproject.github.io/} (2017).
+
+\bibitem[kas(2017)]{kaspersky}
+\enquote{{Kaspersky White Papers}},
+  \urlprefix\url{http://usa.kaspersky.com/enterprise-security/resources/white-papers}
+  (2017).
+
+\bibitem[mae(2017)]{maec}
+\emph{{Malware Attribute Enumeration Characterization}} (2017),
+  \urlprefix\url{https://maec.mitre.org/}.
+
+\bibitem[mis(2017)]{misp}
+\enquote{{Malware Information Sharing Platform (MISP)}},
+  \urlprefix\url{http://www.misp-project.org/} (2017).
+
+\bibitem[ope(2017{\natexlab{a}})]{openstack}
+\enquote{{Openstack}}, \urlprefix\url{https://www.openstack.org/}
+  (2017{\natexlab{a}}).
+
+\bibitem[pdf(2017)]{pdfminer}
+\enquote{{PDFMiner}},
+  \urlprefix\url{http://www.unixuser.org/{~}euske/python/pdfminer/} (2017).
+
+\bibitem[sno(2017)]{snort}
+\enquote{{Snort rules}}, \urlprefix\url{https://www.snort.org/} (2017).
+
+\bibitem[sti(2017)]{stix}
+\enquote{{Structured Threat Information eXpression}},
+  \urlprefix\url{https://stixproject.github.io/} (2017).
+
+\bibitem[sur(2017)]{suricata}
+\enquote{{Suricata rules}}, \urlprefix\url{https://suricata-ids.org/} (2017).
+
+\bibitem[sym(2017)]{symantecblog}
+\enquote{{Symantec blog}},
+  \urlprefix\url{https://www.symantec.com/connect/blogs} (2017).
+
+\bibitem[ten(2017)]{tensorflowapi}
+\enquote{{Tensorflow Api docs}},
+  \urlprefix\url{https://www.tensorflow.org/api{\_}guides/python/nn} (2017).
+
+\bibitem[ope(2017{\natexlab{b}})]{openioc}
+\enquote{{The OpenIOC Framework.}}, \urlprefix\url{http://www.openioc.org/}
+  (2017{\natexlab{b}}).
+
+\bibitem[tax(2017)]{taxii}
+\enquote{{Trusted Automated eXchange of Indicator Information}},
+  \urlprefix\url{https://taxiiproject.github.io/} (2017).
+
+\bibitem[ver(2017)]{verizon}
+\enquote{{Verizon's 2016 Data Breach Investigations Report}}, Tech. rep.,
+  \urlprefix\url{http://www.verizonenterprise.com/verizon-insights-lab/dbir/2016/}
+  (2017).
+
+\bibitem[yar(2017)]{yara}
+\enquote{{Yara rules}}, \urlprefix\url{https://virustotal.github.io/yara/}
+  (2017).
+
+\bibitem[Abadi \emph{et~al.}(2016)]{abadi}
+Abadi, M., P.~Barham, J.~Chen, Z.~Chen, A.~Davis, J.~Dean, M.~Devin,
+  S.~Ghemawat, G.~Irving, M.~Isard, M.~Kudlur, J.~Levenberg, R.~Monga,
+  S.~Moore, D.~G. Murray, B.~Steiner, P.~Tucker, V.~Vasudevan, P.~Warden,
+  M.~Wicke, Y.~Yu and X.~Zheng, \enquote{{TensorFlow: A system for large-scale
+  machine learning}}, Google Brain p.~18,
+  \urlprefix\url{http://arxiv.org/abs/1605.08695} (2016).
+
+\bibitem[Andress(2015)]{andress}
+Andress, J., \enquote{{Working with Indicators of Compromise}}, in
+  \enquote{Journal Information Systems Security Association (ISSA) 5},  (2015).
+
+\bibitem[Bayer \emph{et~al.}(2009)]{bayer}
+Bayer, U., I.~Habibi, D.~Balzarotti, E.~Kirda and C.~Kruegel, \enquote{{A view
+  on current malware behaviors}}, Proceedings of the 2nd USENIX conference on
+  Large-scale exploits and emergent threats: botnets, spyware, worms, and more
+  p.~8, \urlprefix\url{http://portal.acm.org/citation.cfm?id=1855676.1855684}
+  (2009).
+
+\bibitem[Bengio \emph{et~al.}(2003)]{bengio}
+Bengio, Y., R.~Ducharme, P.~Vincent and C.~Janvin, \enquote{{A Neural
+  Probabilistic Language Model}}, The Journal of Machine Learning Research
+  \textbf{3}, 1137--1155 (2003).
+
+\bibitem[Bojarski \emph{et~al.}(2016)]{bojarski}
+Bojarski, M., D.~Testa, D.~Dworakowski, B.~Firner, B.~Flepp, P.~Goyal,
+  L.~Jackel, M.~Monfort, M.~Zhang, X.~Zhang, J.~Zhao and Z.~K.:, \enquote{{End
+  to end learning for self-driving cars}}, in \enquote{arXiv preprint
+  arXiv:1604.07316},  (2016).
+
+\bibitem[{Catakoglu O.} and Balzarotti(2016)]{catakoglu}
+{Catakoglu O.}, B.~M. and D.~Balzarotti, \emph{{Automatic extraction of
+  indicators of compromise for web applications}} (In WWW, 2016).
+
+\bibitem[Claessen \emph{et~al.}(2014)]{claessen}
+Claessen, K., J.~Duregard and M.~Palka, \enquote{{Generating Constrained Random
+  Data with Uniform Distribution}}, Functional and Logic Programming, Lecture
+  Notes in Computer Science \textbf{8475}, pp. 18--34 (2014).
+
+\bibitem[Collobert \emph{et~al.}(2011)]{collobert}
+Collobert, R., J.~Weston, L.~Bottou, M.~Karlen, K.~Kavukcuoglu and P.~Kuksa,
+  \enquote{{Natural Language Processing (Almost) from Scratch}}, Journal of
+  Machine Learning Research \textbf{12}, 2493--2537 (2011).
+
+\bibitem[Cortes \emph{et~al.}(1995)]{cortes}
+Cortes, C., Vapnik and V., \enquote{{Support-vector networks.}}, Machine
+  Learning pp. pp. 273--297 (1995).
+
+\bibitem[Daly(2009)]{daly}
+Daly, M.~K., \enquote{{Advanced persistent threat}}, Usenix, Nov \textbf{4}, 4,
+  2013--2016 (2009).
+
+\bibitem[Friedman(2002)]{friedman}
+Friedman, J.~H., \enquote{{Stochastic gradient boosting}}, Computational
+  Statistics and Data Analysis \textbf{38}, 4, 367--378 (2002).
+
+\bibitem[Friedman \emph{et~al.}(1997)]{nir}
+Friedman, N., D.~Geiger and M.~Goldszmidt, \enquote{{Bayesian network
+  classifiers.}}, Machine Learning pp. pp. 131--163 (1997).
+
+\bibitem[Goodfellow \emph{et~al.}(2013)]{goodfellow}
+Goodfellow, I.~J., D.~Warde-Farley, M.~Mirza, A.~Courville and Y.~Bengio,
+  \enquote{{Maxout Networks}}, in \enquote{Proceedings of the 30th
+  International Conference on Machine Learning (ICML)}, vol.~28, pp. 1319--1327
+  (2013).
+
+\bibitem[Hinton \emph{et~al.}(2012)]{hinton}
+Hinton, G.~E., N.~Srivastava, A.~Krizhevsky, I.~Sutskever and R.~R.
+  Salakhutdinov, \enquote{{Improving neural networks by preventing
+  co-adaptation of feature detectors}}, ArXiv e-prints pp. 1--18,
+  \urlprefix\url{http://arxiv.org/abs/1207.0580} (2012).
+
+\bibitem[Hu \emph{et~al.}(2014)]{hu}
+Hu, B., Z.~Lu, H.~Li and Q.~Chen, \enquote{{Convolutional neural network
+  architectures for matching natural language sentences}}, NIPS pp. pp.
+  2042--2050 (2014).
+
+\bibitem[Kim(2014)]{kim}
+Kim, Y., \enquote{{Convolutional neural networks for sentence classification}},
+  in \enquote{Proceedings of the Empiricial Methods in Natural Language
+  Processing},  (2014).
+
+\bibitem[Krizhevsky \emph{et~al.}(2012)]{krizhevsky}
+Krizhevsky, A., I.~Sutskever and G.~Hinton, \enquote{{ImageNet classification
+  with deep convolutional neural networks}}, NIPS  (2012).
+
+\bibitem[Liao \emph{et~al.}(2016)]{liao}
+Liao, X., K.~Yuan, X.~Wang, Z.~Li, L.~Xing and R.~Beyah, \enquote{{Acing the
+  IOC Game : Toward Automatic Discovery and Analysis of Open-Source Cyber
+  Threat Intelligence}}, in \enquote{CCS '16 Proceedings of the 2016 ACM SIGSAC
+  Conference on Computer and Communications Security}, pp. 755--766 (2016).
+
+\bibitem[Liao and Vemuri(2002)]{liao1}
+Liao, Y. and V.~Vemuri, \enquote{{Use of K-Nearest Neighbor classifier for
+  intrusion detection.}}, Computers and Security. \textbf{21}, 5, pp. 439--448
+  (2002).
+
+\bibitem[Lunt(1993)]{lunt}
+Lunt, T.~F., \enquote{{A survey of intrusion detection techniques}}, In:
+  Computers {\&} Security \textbf{12}, 4, pp. 405--418 (1993).
+
+\bibitem[McMillan(????)]{rob}
+McMillan, R., \enquote{{Open Threat Intelligence}},  \textbf{2013},
+  \urlprefix\url{https://www.gartner.com/doc/2487216/definition-threat-intelligence}
+  (????).
+
+\bibitem[Mikolov \emph{et~al.}(2013)]{mikolov}
+Mikolov, T., I.~Sutskever, K.~Chen, G.~Corrado and J.~Dean,
+  \enquote{{Distributed Representations of Words and Phrases and their
+  Compositionality}}, in \enquote{Proceedings of Neural Information Processing
+  Systems},  (2013).
+
+\bibitem[Nair and Hinton(2010)]{nair}
+Nair, V. and G.~E. Hinton, \enquote{{Rectified Linear Units Improve Restricted
+  Boltzmann Machines}}, Proceedings of the 27th International Conference on
+  Machine Learning , 3, 807--814 (2010).
+
+\bibitem[Ng(2004)]{ng}
+Ng, A., \enquote{{Feature selection, {\$}l{\_}1{\$} vs. {\$}l{\_}2{\$}
+  regularization, and rotational invariance.}}, in \enquote{Proceedings of the
+  Twenty-First International Conference on Machine Learning},  (2004).
+
+\bibitem[Obrst \emph{et~al.}(2014)]{obrst}
+Obrst, L., P.~Chase and R.~Markeloff, \enquote{{Developing an ontology of the
+  cyber security domain}}, in \enquote{CEUR Workshop Proceedings}, vol. 966,
+  pp. 49--56 (2014).
+
+\bibitem[O'Gorman and McDonald(2012)]{gorman}
+O'Gorman, G. and G.~McDonald, \emph{{Ransomware: A growing menace (Technical
+  report)}} (Symantec Corporation, 2012).
+
+\bibitem[Oktavianto and Muhardianto(2013)]{oktavianto}
+Oktavianto, D. and I.~Muhardianto, \emph{{Cuckoo Malware Analysis}} (Packt Pbl.
+  Ltd, 2013).
+
+\bibitem[Pennington \emph{et~al.}(2014)]{pennington}
+Pennington, J., R.~Socher and C.~D. Manning, \enquote{{Glove: Global vectors
+  for word representation}}, in \enquote{Proceedings of the Empiricial Methods
+  in Natural Language Processing},  (2014).
+
+\bibitem[Ranzato \emph{et~al.}(2007)]{ranzato}
+Ranzato, M., F.~J. Huang, Y.~L. Boureau and Y.~LeCun, \enquote{{Unsupervised
+  learning of invariant feature hierarchies with applications to object
+  recognition}}, in \enquote{Proceedings of the IEEE Computer Society
+  Conference on Computer Vision and Pattern Recognition},  (2007).
+
+\bibitem[Rumelhart \emph{et~al.}(1986)]{rumelhart}
+Rumelhart, D., G.~Hinton and R.~Williams, \enquote{{Learning Representations by
+  Back-Propagating Errors}}, Nature \textbf{323}, pp. 533--536 (1986).
+
+\bibitem[Sekar and Uppuluri(1999)]{sekar}
+Sekar, R. and P.~Uppuluri, \enquote{{Synthesizing Fast Intrusion
+  Prevention/Detection Systems from High-Level Specifications}}, in
+  \enquote{Proceedings of the USENIX Security Symposium},  (1999).
+
+\bibitem[Srivastava \emph{et~al.}(2014)]{srivastava}
+Srivastava, N., G.~Hinton, A.~Krizhevsky, I.~Sutskever and R.~Salakhutdinov,
+  \enquote{{Dropout: A simple way to prevent neural networks from
+  overfitting}}, JMLR \textbf{15}, pp. 1929--1958 (2014).
+
+\bibitem[Stone \emph{et~al.}(2008)]{stone}
+Stone, Z., T.~Zickler and T.~Darrell, \enquote{{Autotagging Facebook: Social
+  network context improves photo annotation}}, in \enquote{2008 IEEE Computer
+  Society Conference on Computer Vision and Pattern Recognition Workshops, CVPR
+  Workshops},  (2008).
+
+\bibitem[Yih \emph{et~al.}(2011)]{yih}
+Yih, W., K.~Toutanova, J.~Platt and C.~Meek, \enquote{{Learning discriminative
+  projections for text similarity measures}}, Proceedings of the Fifteenth
+  Conference on Computational Natural Language Learning pp. 247--256,
+  \urlprefix\url{http://dl.acm.org/citation.cfm?id=2018965} (2011).
+
+\bibitem[Zou and Hastie(2005)]{zou}
+Zou, H. and T.~Hastie, \enquote{{Regularization and variable selection via the
+  elastic net}}, Journal of the Royal Statistical Society. Series B:
+  Statistical Methodology \textbf{67}, 2, 301--320 (2005).
+
+\end{thebibliography}

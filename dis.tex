@@ -1,0 +1,232 @@
+\documentclass[12pt,letterpaper]{report}
+\usepackage[square,numbers]{natbib}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{afterpage}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsbsy}
+\usepackage{dcolumn,array}
+\usepackage{tocloft}
+
+% for title case
+\usepackage{titlecaps}
+\Addlcwords{and, the, or, of, that, our, by, a, prevent, for}
+
+% avoid widows
+\usepackage[all]{nowidow}
+\clubpenalty=10000
+
+\usepackage{asudis}
+%% These are for including code
+%% and for upquotes
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{listingsutf8}
+\usepackage{comment}
+\usepackage{color}
+\usepackage{dirtytalk} % for quotations
+\usepackage[justification=centering]{caption}
+\usepackage[pageanchor=true,plainpages=false,pdfpagelabels,bookmarks,bookmarksnumbered,hidelinks]{hyperref}
+
+
+% for footnotes in tables
+\usepackage{tablefootnote}
+
+% for arithmetic
+\usepackage{xintexpr}
+
+\usepackage{textcomp}     % access \textquotesingle
+
+\definecolor{mygray}{rgb}{0.6,0.6,0.6}
+\definecolor{lightgray}{rgb}{0.92,0.92,0.92}
+\definecolor{darkgreen}{rgb}{0,0.7,0}
+% default options for listings
+\lstset{
+	backgroundcolor=\color{lightgray},
+	basicstyle=\footnotesize,
+	breaklines=true, 
+	captionpos=b,
+	commentstyle=\color{darkgreen}, 
+	frame=single,
+	keywordstyle=\color{blue}, 
+	numbers=left,
+	numbersep=5pt,
+	numberstyle=\tiny\color{mygray},
+	rulecolor=\color{black},
+	showstringspaces=false,
+	upquote=true
+}
+
+	
+\newcommand{\dq}[1]{``{#1}''}
+%% THIS IS THE DATA FOR OUR THESIS, UPDATING HERE WILL UPDATE EVERYWHERE %%
+\newcommand{\urls}{21,675,680\xspace}
+
+\newcommand{\forms}{6,794,917\xspace}
+\newcommand{\formsDelta}{31.35\%\xspace}
+
+\newcommand{\emailforms}{1,132,157\xspace}
+\newcommand{\emailformsDelta}{16.66\%\xspace}
+
+\newcommand{\fuzzed}{934,016\xspace}
+\newcommand{\fuzzedDelta}{82.50\%\xspace}
+
+\newcommand{\recd}{52,724\xspace}
+\newcommand{\recdDelta}{5.64\%\xspace}
+
+\newcommand{\malfuzzed}{46,156\xspace}
+\newcommand{\malfuzzedDelta}{87.54\%\xspace}
+
+\newcommand{\success}{673\xspace}
+\newcommand{\successDelta}{1.46\%\xspace}
+\newcommand{\successWebsitesDelta}{0.029\%\xspace} % calc 296/1,019,921
+
+\newcommand{\domains}{296\xspace}
+\newcommand{\emailedDefaultmailbox}{111\xspace}
+\newcommand{\responses}{15\xspace}
+\newcommand{\confirmed}{10\xspace}
+\newcommand{\ips}{413\xspace}
+
+\newcommand{\ipsblacklist}{106\xspace}
+\newcommand{\ipsblacklistmulti}{33\xspace}
+
+\newcommand{\ehibcc}{329\xspace}
+\newcommand{\ehixcheck}{396\xspace}
+\newcommand{\ehito}{163\xspace}
+\newcommand{\ehibccxcheck}{216\xspace}
+\newcommand{\ehitoxcheck}{13\xspace}
+\newcommand{\ehinuserxcheck}{219\xspace}
+\newcommand{\ehiuniquenuserxcheck}{181\xspace}
+
+% these refer to unique domains, not unique forms
+\newcommand{\uniqueforms}{1,019,921\xspace}
+\newcommand{\uniqueemailforms}{197,570\xspace}
+
+\newcommand{\ehi}{E-\nobreak{}mail Header Injection\xspace}
+
+\begin{document}
+%-----------------------front matter
+\pagenumbering{roman}
+\title{iGen: Toward Automatic Generation and\\
+ Analysis of Indicators of Compromise (IOCs)\\
+ using Convolutional Neural Network}
+\author{Anupam Panwar}
+\degreeName{Master of Science}
+\paperType{Thesis}
+\defensemonth{April}
+\defenseyear{2017}
+\gradmonth{May}
+\gradyear{2017}
+\chair{Gail-Joon Ahn}
+\memberOne{Adam Doup\'e}
+\memberTwo{Ziming Zhao}
+\maketitle
+\doublespace
+\include{abstract}
+\dedicationpage{To my mother}
+\include{ack}
+\tableofcontents
+% This puts the word "Page" right justified above everything else.
+\addtocontents{toc}{~\hfill Page\par}
+% Asking LaTeX for a new page here guarantees that the LOF is on a separate page
+% after the TOC ends.
+\newpage
+% Making the LOT and LOF "parts" rather than chapters gets them indented at
+% level -1 according to the chart: top of page 4 of the document at
+% ftp://tug.ctan.org/pub/tex-archive/macros/latex/contrib/tocloft/tocloft.pdf
+\addcontentsline{toc}{part}{LIST OF TABLES}
+\renewcommand{\cftlabel}{Table}
+\listoftables
+% This gets the headers for the LOT right on the first page.  Subsequent pages
+% are handled by the fancyhdr code in the asudis.sty file.
+\addtocontents{lot}{Table~\hfill Page \par}
+\newpage
+\addcontentsline{toc}{part}{LIST OF FIGURES}
+\addtocontents{lof}{Figure~\hfill Page \par}
+\addtocontents{toc}{CHAPTER \par}
+\renewcommand{\cftlabel}{Figure}
+\listoffigures
+% This gets the headers for the LOF right on the first page.  Subsequent pages
+% are handled by the fancyhdr code in the asudis.sty file.
+%----- XML Listing Configurations -------------
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{forestGreen}{RGB}{34,139,34}
+\definecolor{orangeRed}{RGB}{255,69,0}
+\definecolor{white}{RGB}{255,255,255}
+ 
+\lstdefinelanguage{bpel}{
+morekeywords={name,linkName,isolated,parallel,partnerLink,operation,portType,inputVariable,createInstance,
+variable,element,location,importType,partnerLinkType,myRole,messageType,properties,level,outputVariable,
+xmlns,version,encoding}
+}
+\lstdefinelanguage{xaml}{
+morekeywords={TypeArguments,Name,Default,DisplayName,OperationName,ServiceContractName,Key,AddressUri,
+CanCreateInstance, LogName, Message, MessageNumber, Expression,CorrelationHandle,Request}
+}
+ 
+\lstdefinelanguage{xml}{
+        basicstyle=\small,
+        sensitive=false,
+}
+ 
+\lstdefinestyle{workflowStyle}{
+language=XML,
+alsolanguage=bpel,
+alsolanguage=xaml,
+%Formatting
+basicstyle=\scriptsize,
+sensitive=true,
+showstringspaces=false,
+numbers=left,
+numberstyle=\tiny,
+tabsize=4,
+numbersep=3pt,
+extendedchars=true,
+xleftmargin=2em,
+lineskip=1pt,
+breaklines,
+captionpos=t,
+%Coloring
+backgroundcolor=\color{white},
+morekeywords={BooleanExpression},
+alsoletter={:,<,>,/,?},
+morestring=[b]{"},
+morecomment=[s]{<!--}{-->},keywordstyle=\color{forestGreen},
+identifierstyle=\color{blue}\ttfamily,
+stringstyle=\color{orangeRed}\ttfamily,
+commentstyle=\color{forestGreen}\ttfamily
+}
+ 
+ 
+\lstnewenvironment{workflow-code}[2]{
+\lstset{caption=#1,label=#2,style=workflowStyle}
+}{}
+%-----------------------body
+\doublespace
+\pagenumbering{arabic}
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+\include{chapter7}
+
+
+%-----------------------back matter
+{\singlespace
+% Making the references a "part" rather than a chapter gets it indented at
+% level -1 according to the chart: top of page 4 of the document at
+% ftp://tug.ctan.org/pub/tex-archive/macros/latex/contrib/tocloft/tocloft.pdf
+\addcontentsline{toc}{part}{REFERENCES}
+\bibliographystyle{asudis}
+%\bibliographystyle{unsrt}
+\bibliography{dis}}
+\nocite{*}
+\renewcommand{\chaptername}{APPENDIX}
+\addtocontents{toc}{APPENDIX \par}
+\appendix
+\include{appendix1}
+\end{document}

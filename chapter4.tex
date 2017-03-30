@@ -1,0 +1,5 @@
+\chapter{IMPLEMENTATION}
+\label{implementation}
+We implemented iGen that collects IOCs from various external and internal IOC data sources. The automatic crawling and analysis systems were implemented in Python. For example, Blog Scrapper (BS) and APT report Collector (ARC) were built using Python based libraries like pdfminer, beautifulsoup and textblob. Additionally, we are generating the malware reports using our in-house Cuckoo malware analysis system. Relevant Content Picker (RCP), IOC Extractor (IE) and IOC Generator (IG) uses re and nltk for information extraction. CNN based Sentence Classification (CSC) uses numpy and Google's tensorflow library. Different output formats are generated using the open-source tool Malware Information Sharing Platform (MISP). 
+
+We deployed our system iGen modules on our Openstack~\cite{openstack}. Data acquisition module and IOC extraction module on a dedicated Openstack instance with 8GB RAM. Whereas, rule generation module runs on other instance with 4GB RAM. 

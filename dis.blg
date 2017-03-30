@@ -1,0 +1,78 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: dis.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: ack.aux
+A level-1 auxiliary file: chapter1.aux
+A level-1 auxiliary file: chapter2.aux
+A level-1 auxiliary file: chapter3.aux
+A level-1 auxiliary file: chapter4.aux
+A level-1 auxiliary file: chapter5.aux
+A level-1 auxiliary file: chapter6.aux
+A level-1 auxiliary file: chapter7.aux
+The style file: asudis.bst
+A level-1 auxiliary file: appendix1.aux
+Database file #1: dis.bib
+Warning--to sort, need author or key in verizon
+Warning--to sort, need author or key in openioc
+Warning--to sort, need author or key in stix
+Warning--to sort, need author or key in cybox
+Warning--to sort, need author or key in taxii
+Warning--to sort, need author or key in snort
+Warning--to sort, need author or key in suricata
+Warning--to sort, need author or key in yara
+Warning--to sort, need author, editor, or key in maec
+Warning--to sort, need author or key in capec
+Warning--to sort, need author or key in otx
+Warning--to sort, need author or key in apt
+Warning--to sort, need author or key in symantecblog
+Warning--to sort, need author or key in cozyduke
+Warning--to sort, need author or key in misp
+Warning--to sort, need author or key in kaspersky
+Warning--to sort, need author or key in pdfminer
+Warning--to sort, need author or key in beautifulsoup
+Warning--to sort, need author or key in tensorflowapi
+Warning--to sort, need author or key in openstack
+Warning--empty author in otx
+Warning--empty note in otx
+Warning--empty author in apt
+Warning--empty note in apt
+Warning--empty author in beautifulsoup
+Warning--empty note in beautifulsoup
+Warning--empty author in capec
+Warning--empty note in capec
+Warning--empty author in cozyduke
+Warning--empty note in cozyduke
+Warning--empty author in cybox
+Warning--empty note in cybox
+Warning--empty author in kaspersky
+Warning--empty note in kaspersky
+Warning--empty author and editor in maec
+Warning--empty publisher in maec
+Warning--empty author in misp
+Warning--empty note in misp
+Warning--empty author in openstack
+Warning--empty note in openstack
+Warning--empty author in pdfminer
+Warning--empty note in pdfminer
+Warning--empty author in snort
+Warning--empty note in snort
+Warning--empty author in stix
+Warning--empty note in stix
+Warning--empty author in suricata
+Warning--empty note in suricata
+Warning--empty author in symantecblog
+Warning--empty note in symantecblog
+Warning--empty author in tensorflowapi
+Warning--empty note in tensorflowapi
+Warning--empty author in openioc
+Warning--empty note in openioc
+Warning--empty author in taxii
+Warning--empty note in taxii
+Warning--empty author in verizon
+Warning--empty institution in verizon
+Warning--empty author in yara
+Warning--empty note in yara
+Warning--empty publisher in andress
+Warning--empty journal in rob
+Warning--empty year in rob; set to ????
+Warning--there's a number but no volume in nair
+(There were 64 warnings)
