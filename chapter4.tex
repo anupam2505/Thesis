@@ -1,5 +1,5 @@
 \chapter{SYSTEM DESIGN}
-\label{igen}
+\label{design}
 Human are very intelligent in understanding natural language text and finding the information using reasoning. In our case, this information is IOCs from security reports, articles, and malware reports. However, it is very hard for the machines to do the information extraction with high accuracy and coverage. 
 
 iGen identifies sentences likely containing IOCs using a set of regular expressions. Then, IOCs are efficiently captured with high accuracy using CNN-based model.  iGen tries to automatically identify the patterns or features which are frequent in IOC and non-IOC sentences. Architectural design of the iGen is shown in Figure~\ref{fig:architecture}.
@@ -18,7 +18,7 @@ iGen consists of 3 modules from left to right: 1) data acquisition module, 2) CN
 
  Then, these reports are passed to an IOC extraction module based on the type of the report. Because blog articles and security reports are written in English and follow natural language semantics, these are given as input to the Relevant Content Picker (RCP) component for further processing. RCP parses those reports, cleans the text, and selects the sentences having likely IOCs using regular expressions. Then, these sentences are fed to the CNN based Sentence Classification (CSC) module for classification into two classes: IOC and non-IOC sentences.  Whereas, malware reports follow JSON format with no natural language semantics involved. This makes it easier for IOC Extractor (IE) to extract IOCs based on the structure of the JSON report. Simultaneously, IE also performs regular expressions based extraction of IOCs from the sentences that are classified by CNN based Sentence Classifier (CSC) as IOC sentences.    
 
-Next step is to organize IOCs extracted from each report into one event (malware or APT campaign) is done by IOC Generator (IG). For example, “Monkeys.exe” and “200.125.133.28” are the IOCs related to the event CozyDuke APT campaign~\cite{cozyduke}. Then, these events are stored and managed by Malware Information Sharing Platform (MISP)~\cite{misp}. MISP also provide an additional functionality to iGen by converting these event into different output formats like STIX, OpenIOC, Snort etc. 
+Next step is to organize IOCs extracted from each report into one event (malware or APT campaign) is done by IOC Generator (IG). For example, ``Monkeys.exe'' and ``200.125.133.28'' are the IOCs related to the event CozyDuke APT campaign~\cite{cozyduke}. Then, these events are stored and managed by Malware Information Sharing Platform (MISP)~\cite{misp}. MISP also provide an additional functionality to iGen by converting these event into different output formats like STIX, OpenIOC, Snort etc. 
     
 
 
@@ -97,7 +97,7 @@ Here bais term $c \in \mathbb{R}$ is added and $f$ is a non-linear function such
 \end{equation}
 where $\mathbf{f} \in \mathbb{R}^{l-h+1}$. We then apply a 1-max pooling operation~\cite{ranzato} over the feature map and take the maximum value $\dot{f} = \max \{\mathbf{f}\}$ as the feature corresponding to this particular filter. Intuition behind this is to capture the most important feature---one with the highest value---for each feature map. This kind of approach works naturally with variable sentence lengths. 
 
-Above described process extracts $one$ feature from $one$ filter. The model uses multiple filters with different region size to obtain multiple features. These features creates the penultimate layer and the final layer is a fully connected softmax layer whose output is the probability distribution over labels (in our case, “IOC sentence” or “non-IOC sentence”).
+Above described process extracts $one$ feature from $one$ filter. The model uses multiple filters with different region size to obtain multiple features. These features creates the penultimate layer and the final layer is a fully connected softmax layer whose output is the probability distribution over labels (in our case, ``IOC sentence'' or ``non-IOC sentence'').
 
 In our model, we have fine-tuned word vectors via backpropagation~\cite{rumelhart}. For regularization~\cite{zou} we used dropout~\cite{srivastava} on the penultimate layer with a constraint on $l_2$-norms~\cite{ng} of the weight vectors~\cite{hinton}. Dropout helps in co-adaptation of hidden units by randomly dropping out---i.e., setting to zero---a proportion $p$ of the hidden units during foward-backpropagation. That is, given the penultimate layer $\mathbf{y} = [\dot{f}_1, \ldots, \dot{f}_n]$ where $n$ is total number of filters). Instead of using
 \begin{equation}
