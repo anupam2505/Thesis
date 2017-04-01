@@ -1,6 +1,6 @@
 Table\nobreakspace {}\hfill Page \par 
-\contentsline {table}{\numberline {3.1}{\ignorespaces Summary of Dataset\relax }}{13}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Sample Regular Expressions used by Relevant Content Picker (RCP) and IOC Extractor (IE).\relax }}{18}
-\contentsline {table}{\numberline {5.1}{\ignorespaces Change in accuracy with embedding size.\relax }}{23}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Change in accuracy with number of filters.\relax }}{24}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Results of our iGen models against other methods. $\mathbf {SVM}$ (Support Vector Machine), $\mathbf {NB}$ (Naive Bayes), and $\mathbf {5-NN}$ (5-Nearest Neighbours) classifiers were compared with feature vectors as bag of words (BOW), term frequency (tf), and term frequency - inverse document frequency (tfidf). \relax }}{27}
+\contentsline {table}{\numberline {3.1}{\ignorespaces \titlecap {Summary of dataset}}}{12}{table.caption.8}
+\contentsline {table}{\numberline {4.1}{\ignorespaces \titlecap {Sample Regular Expressions}}}{21}{table.caption.11}
+\contentsline {table}{\numberline {6.1}{\ignorespaces \titlecap {Change in accuracy with embedding size.}}}{25}{table.caption.12}
+\contentsline {table}{\numberline {6.2}{\ignorespaces \titlecap {Change in accuracy with number of filters.}}}{26}{table.caption.13}
+\contentsline {table}{\numberline {6.3}{\ignorespaces \titlecap {Comparative analysis with other methods}}}{29}{table.caption.16}

@@ -1,5 +1,6 @@
 Figure\nobreakspace {}\hfill Page \par 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces iGen Architecture Overview.\relax }}{11}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Architecture of CNN based sentence classification model. We show two filter region sizes: 4 and 5, each of which has 2 filters. Filters or kernels accomplish convolutions and apply activation functions on the sentence matrix and generate (variable-length) feature maps; 1-max pooling is performed over each map, i.e., the largest number from each feature map is recorded. Thus a univariate feature vector is generated from all 4 maps, and these 4 features are concatenated to form a feature vector for the penultimate layer. The final softmax layer then receives this feature vector as input and uses it to classify the sentence; here we are performing binary classification and hence depict two possible output states.\relax }}{21}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Change in loss over steps (blue is training data, red is 10\% dev data).\relax }}{25}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Change in accuracy over steps (blue is training data, red is 10\% dev data).\relax }}{26}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces \titlecap {IOC lifecycle}}}{7}{figure.caption.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces iGen Architecture Overview.\relax }}{15}{figure.caption.9}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \titlecap {Architecture of iGen CNN based sentence classification model.}}}{23}{figure.caption.10}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \titlecap {Change in loss function over steps.}}}{27}{figure.caption.14}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces \titlecap {Change in accuracy over steps.}}}{28}{figure.caption.15}

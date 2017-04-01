@@ -1,5 +1,13 @@
 \chapter{INTRODUCTION}
 \label{chap:introduction}
+
+\begin{figure} [tb]
+  \includegraphics[width=14cm, height=10cm]{lifecycle.pdf}
+  \caption [\titlecap{IOC lifecycle}] {IOC Lifecycle. The process starts from the collection of data from internal (e.g., malware analysis reports, network logs, etc.) and external (e.g., security blogs, security white-papers, etc.) sources. Data analysis identifies the IOCs using log analysis, forensics analysis, false positive identification, etc. All IOCs are converted into security formats such as OpenIOC~\cite{openioc}, snort~\cite{snort}, etc., during the IOC creation step. Then, these IOCs are deployed on security tools such as Intrusion Detection Systems (IDS), Host based Intrusion Detection Systems (HIDS), Security Information and Event Management (SIEM), and other investigative systems~\cite{lunt}. During the $5^{th}$ stage, suspected systems are identified. Then, log data and forensic images of suspected systems are provided to the data collection step for the creation of new IOCs. }
+  \label{fig:ioc}
+\end{figure}
+
+\paragraph{}
 According to Verizon's 2016 Data Breach Investigations Report~\cite{verizon}, over 100,000 security incidents were reported in 2016 across 82 countries, which is a 25\% increase over the prior year. Because the number of security threats and breaches is rapidly increasing over time, every organization is attempting to protect their systems and their data. The threat landscape is always progressing, and the information security risk is increasing because of the organization's dependence on computing systems. This constantly shifting and constantly increasing number of threats results in tremendous pressure on organizations to manage threats.
 % Adam: I don't understand what the next two sentences are trying to say. Could they be reworded?
 Though abundant information is available in the form of unstructured data, it is very difficult and time-consuming to mine meaningful information based on which preemptive measures can be established. This attracts more and more researchers towards Threat Intelligence (TI) as it helps to understand threats using the deluge of data and provides actionable insights.
@@ -10,10 +18,14 @@ Indicators of Compromise (IOCs) are forensic artifacts that are used as signs th
 
 Figure~\ref{fig:ioc} explains the typical life cycle for the use of IOCs in an organization. This life cycle consists of five steps: data collection, data analysis, IOC creation, deployment of IOCs on security infrastructure, and identification of affected systems using deployed IOCs. As a final step, log data of these compromised systems is collected and used for the creation new IOCs, which feeds back into the IOC life cycle in a cyclical way.
 
+
 Several standards are commonly used to represent IOCs for expressing cyber-threat intelligence information such as: OpenIOC~\cite{openioc}, Structured Threat Information eXpression (STIX)~\cite{stix}, Cyber Observable eXpression (CybOX)~\cite{cybox}, Trusted Automated eXchange of Indicator Information (TAXII)~\cite{taxii}, Snort~\cite{snort}, Suricata~\cite{suricata}, YARA~\cite{yara}, Malware Attribute Enumeration and Characterization (MAEC)~\cite{maec}, and Common Attack Pattern Enumeration and Classification (CAPEC)~\cite{capec}.
 
+\paragraph{} % Importance of IOCs
 IOCs can help an organizations' security personnel to attain full automation: Given a set of IOCs for a particular security event, security tools scan through an environment or infrastructure to identify the existence of any IOC on the systems in question. IOCs complement and augment existing solutions, such as Intrusion Detection Systems (IDS) or Security Information and Event Managements (SIEMs), by providing an additional and important set of information that can be used to decide whether a particular artifact being examined is malicious or not. IOCs provide a rapid route to detect new or zero-day attacks for which virus signatures or detection rules have yet to be developed for existing security tools. Thus, timely generation of IOCs is important. Also, IOC formats document a threat in a consistent fashion, thus it becomes easier for organizations to share this threat information. 
 
+
+\paragraph{} % Limitations
 However, effective collection and sharing of threat information is a challenge. Current threat intelligence systems have following limitations: 
 \begin{itemize}
  \item[$\bullet$ ] Threat data received from different sources, such as malware reports, APT white-papers, etc., is examined and interpreted
@@ -27,6 +39,7 @@ data in an organizations' security infrastructure.
 
 %iGen is tackling all these limitation by intelligently collecting and exchanging the information in the form of IOCs (e.g. virus signatures, IPs, domains, MD5 hashes etc.). After the collection, iGen automatically transforms these IOCs into different threat information sharing standards such as STIX , OpenIOC , and Snort rules etc. and fed into different defense mechanisms (e.g. Intrusion Detection Systems (IDS) etc). Biggest challenge in the field of TI is to intelligently gather such information from large amount of data and timely deploy it on defense mechanisms.
 
+\paragraph{} % iGen
 In this project we present iGen, which is a system that tackles all of these limitation by intelligently collecting threat information from publicly available security resources and sharing the threat information in the form of IOCs (e.g., virus signatures, IPs, domains, or MD5 hashes). iGen automates the entire process of collecting publicly available data (data collection) to IOC generation. iGen supports a flexible system to collect data from diverse data sources. Currently, iGen collects data from 20 security blogs, an APT reports database~\cite{apt}, and a malware analysis system. The flexible nature of the system means that new data sources can be easily added. Note that the input to iGen is in unstructured English text, therefore iGen must understand the semantics of the sentences present in the input data to categorize IOC-alike strings into IOC or non-IOCs. Also, we added a practical improvement to iGen that allows transforming these IOCs into various threat information sharing standards.
 
 % Adam: This is way too much detail for the intro
@@ -35,6 +48,20 @@ First module in iGen is data acquisition module which collects key observations 
 Simple extraction of IOCs from publicly available security resources is straightforward: regular expressions can extract MD5s, URLs, filenames, filepaths, etc. However, this na\"{\i}ve approach will result in a significant amount of false positives: these security resources will include MD5s, URLs, and filenames that are \emph{relevant to the security incident but are not malicious, and thus not an IOC}. Therefore, we need an approach that can automatically filter these potential IOCs \emph{based on the context}.
 While prior work has shown that filtering potential IOCs can be done with manual creation of features~\cite{liao}, iGen leverages a deep-learning Convolutional Neural Network, which selects features automatically. This enables iGen to be more effective and to use diverse data sets. 
 
+\paragraph{Structure of document} % short describe the sections 
+This thesis document is grouped into the following sections:
+\begin{itemize}
+	\item Chapter 2 discusses the basics of Threat Intelligence (TI) as well as different formats for sharing threat intelligence. This chapter also describes the Convolutional Neural Networks (CNN) which is a core of iGen system. 
+	\item Chapter 3 discusses the data collection from different sources.
+	\item Chapter 4 discusses the System design, the architecture, and the components of iGen system.
+	\item Chapter 5 discusses the implementation details of iGen system.
+	\item Chapter 6 presents our findings and comparative analysis of the results.
+	\item Chapter 7 continues the discussion of the results; the lessons learned, limitations, and improvements that are possible on current iGen system.
+	\item Chapter 8 explores related work in the area.
+	\item Chapter 9 concludes this thesis, with ideas to develop the research in this area.
+\end{itemize}
+
+\paragraph{} % Contribution
 The main contributions of this paper are the following:
 \begin{itemize}
  \item[$\bullet$ ] We present the design of a novel system for intelligently generating IOCs, with high confidence, from different data sources using Convolutional Neural Networks (CNNs) (Section 3). 
